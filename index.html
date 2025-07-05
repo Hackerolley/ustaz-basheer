@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>At-Tobariy Inst</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">At-Tobariy Inst</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#features">Why Us</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#cta">Enroll</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Learn Qur'an Online<br>with Certified Islamic Tutors</h1>
+      <p>From the comfort of your home — for kids, teens, and adults</p>
+      <a href="#courses" class="cta-button">Get Started</a>
+    </div>
+  </header>
+
+  <!-- About Us -->
+ <section id="about" class="section about-section">
+  <div class="about-content">
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>We are a dedicated online Qur'an institute committed to teaching the Qur'an, Tajweed, and Islamic values to students around the world. Our goal is to make authentic Islamic education accessible and flexible for everyone.</p>
+    </div>
+    <div class="about-image">
+      <img src="https://i.ibb.co/gLrBxsyR/lexi-t-mt3cz-Q62-E2-M-unsplash.jpg" alt="About Qur'an School">
+    </div>
+  </div>
+
+</section>
+<!-- Courses Section with Tabs -->
+<section id="courses" class="section">
+  <div class="container">
+    <h2 class="section-title">Our Courses</h2>
+
+    <div class="tabs">
+      <button class="tab-button active" data-target="quran">Qur'an Department</button>
+      <button class="tab-button" data-target="arabic">Arabic Department</button>
+    </div>
+
+    <!-- Quran Department -->
+    <div class="course-grid tab-content" id="quran">
+      <div class="course-card">
+        <h4>📖 Al-Qiraah (Recitation)</h4>
+        <ul>
+          <li>Talqeen (Learning Quranic recitation)</li>
+          <li>Tajweed (Mastering Quranic recitation rules)</li>
+        </ul>
+        <p class="outcome">Outcome: Master Tajweed and recite accurately with confidence.</p>
+      </div>
+      <div class="course-card">
+        <h4>🕋 Hifdhul Qur'an (Memorization)</h4>
+        <p>From beginners to advanced</p>
+        <p class="outcome">Outcome: Memorize the Qur'an progressively with discipline.</p>
+      </div>
+      <div class="course-card">
+        <h4>🔁 Muraajah (Revision)</h4>
+        <p>Perfect and preserve memorized verses</p>
+        <p class="outcome">Outcome: Retain Qur'an through consistent review.</p>
+      </div>
+      <div class="course-card">
+        <h4>🎙 Knowledge of Qiraa'aat</h4>
+        <p>Learn authentic recitation variations</p>
+        <p class="outcome">Outcome: Broaden recitation mastery across Qiraa'aat.</p>
+      </div>
+      <div class="course-card">
+        <h4>📚 Uloomul-Qur'an</h4>
+        <p>Interpretation, history, and context of Qur'an</p>
+        <p class="outcome">Outcome: Understand Tafsir and Qur'anic sciences.</p>
+      </div>
+    </div>
+
+    <!-- Arabic Department -->
+    <div class="course-grid tab-content" id="arabic" style="display:none">
+      <div class="course-card">
+        <h4>🕋 Tawheed</h4>
+        <p class="outcome">Outcome: Understand oneness of Allah and its categories.</p>
+      </div>
+      <div class="course-card">
+        <h4>⚖️ Fiqh</h4>
+        <p class="outcome">Outcome: Apply rulings for worship, family, and transactions.</p>
+      </div>
+      <div class="course-card">
+        <h4>📜 Hadeeth</h4>
+        <p class="outcome">Outcome: Study selected Prophetic traditions and meanings.</p>
+      </div>
+      <div class="course-card">
+        <h4>🔍 Science of Hadeeth</h4>
+        <p class="outcome">Outcome: Understand authentication methods and narrator analysis.</p>
+      </div>
+      <div class="course-card">
+        <h4>📘 Usool al-Fiqh</h4>
+        <p class="outcome">Outcome: Learn how Islamic rulings are derived from sources.</p>
+      </div>
+      <div class="course-card">
+        <h4>🧠 Tafseer</h4>
+        <p class="outcome">Outcome: Explore Qur'anic meanings through classical exegesis.</p>
+      </div>
+      <div class="course-card">
+        <h4>🚶‍♂️ Seerah</h4>
+        <p class="outcome">Outcome: Journey through the life of the Prophet Muhammad (SAW).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tab-button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 20px;
+  background: #f0f0f0;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.tab-button.active {
+  background: #2a7f62;
+  color: white;
+}
+</style>
+
+<script>
+document.querySelectorAll('.tab-button').forEach(button => {
+  button.addEventListener('click', () => {
+    document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    const target = button.getAttribute('data-target');
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.style.display = tab.id === target ? 'grid' : 'none';
+    });
+  });
+});
+
+// GSAP reveal
+window.addEventListener("load", () => {
+  gsap.from(".course-card", {
+    scrollTrigger: {
+      trigger: "#courses",
+      start: "top 80%"
+    },
+    y: 30,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.2
+  });
+});
+</script>
+
+
+
+  <!-- Why Choose Us -->
+ <!-- Why Choose Us -->
+<section id="features" class="section">
+  <h2>Why Choose Us</h2>
+  <div class="features-grid">
+    <div class="feature">🧑‍🏫 1-on-1 Teaching</div>
+    <div class="feature">📆 Flexible Class Schedule</div>
+    <div class="feature">👩‍🏫 Certified Female Teachers</div>
+    <div class="feature">📊 Monthly Progress Reports</div>
+    <div class="feature">🌐 Global Access – Learn from Anywhere</div>
+    <div class="feature">📱 Any Device – Mobile Friendly</div>
+    <div class="feature">🎯 Goal-Oriented Curriculum</div>
+    <div class="feature">🧠 Deep Islamic Knowledge</div>
+  </div>
+</section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="section">
+    <h2>What Our Students Say</h2>
+    <div class="testimonial">
+      <p>"My son memorized 3 Juz in 6 months! Alhamdulillah for this amazing platform."</p>
+      <strong>- Umm Yusuf</strong>
+    </div>
+    <div class="testimonial">
+      <p>"The teachers are so patient and supportive. Highly recommend for kids and adults alike."</p>
+      <strong>- Amina, UK</strong>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="section">
+    <h2>FAQs</h2>
+    <details>
+      <summary>What age groups do you teach?</summary>
+      <p>We teach children from age 4+, teenagers, and adults.</p>
+    </details>
+    <details>
+      <summary>Are female tutors available?</summary>
+      <p>Yes, we have certified female tutors for sisters and kids.</p>
+    </details>
+    <details>
+      <summary>How are classes conducted?</summary>
+      <p>All classes are conducted via Zoom, Google Meet, or WhatsApp video call.</p>
+    </details>
+  </section>
+
+  <!-- Call to Action -->
+  <section id="cta" class="section">
+    <h2>Start Your Qur'an Journey Today</h2>
+    <p>Join hundreds of students learning online. Book a free trial class now.</p>
+    <a href="#" class="cta-button">REGISTER HERE</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Online Qur'an School. All rights reserved.</p>
+    <p>Contact us: <a href="mailto:info@quranschool.com">info@quranschool.com</a> | <a href="https://wa.me/2348062474787?text=As%20salam%20aleikum%2C%20I%20want%20to%20learn%20more%20about%20your%20online%20Quran%20school">WhatsApp</a></p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
