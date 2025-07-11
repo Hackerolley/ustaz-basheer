@@ -10,18 +10,21 @@
 </head>
 <body>
   <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="logo">At-Tobariy Inst</div>
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#courses">Courses</a></li>
-      <li><a href="#features">Why Us</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#cta">Enroll</a></li>
-    </ul>
-  </nav>
+ <nav class="navbar">
+  <div class="logo">At-Tobariy Inst</div>
+
+  <!-- Hamburger Icon for Mobile -->
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <!-- Navigation Links -->
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#courses">Courses</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#cta">Enroll</a></li>
+  </ul>
+</nav>
 
   <!-- Hero Section -->
   <header class="hero">
@@ -51,8 +54,8 @@
     <h2 class="section-title">Our Courses</h2>
 
     <div class="tabs">
-      <button class="tab-button active" data-target="quran">Qur'an Department</button>
-      <button class="tab-button" data-target="arabic">Arabic Department</button>
+      <button class="tab-button active" data-target="quran">Qur'an Courses</button>
+      <button class="tab-button" data-target="arabic">Arabic Courses</button>
     </div>
 
     <!-- Quran Department -->
@@ -173,24 +176,6 @@ window.addEventListener("load", () => {
 });
 </script>
 
-
-
-  <!-- Why Choose Us -->
- <!-- Why Choose Us -->
-<section id="features" class="section">
-  <h2>Why Choose Us</h2>
-  <div class="features-grid">
-    <div class="feature">🧑‍🏫 1-on-1 Teaching</div>
-    <div class="feature">📆 Flexible Class Schedule</div>
-    <div class="feature">👩‍🏫 Certified Female Teachers</div>
-    <div class="feature">📊 Monthly Progress Reports</div>
-    <div class="feature">🌐 Global Access – Learn from Anywhere</div>
-    <div class="feature">📱 Any Device – Mobile Friendly</div>
-    <div class="feature">🎯 Goal-Oriented Curriculum</div>
-    <div class="feature">🧠 Deep Islamic Knowledge</div>
-  </div>
-</section>
-
   <!-- Testimonials -->
   <section id="testimonials" class="section">
     <h2>What Our Students Say</h2>
@@ -231,10 +216,41 @@ window.addEventListener("load", () => {
   <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 Online Qur'an School. All rights reserved.</p>
-    <p>Contact us: <a href="mailto:info@quranschool.com">info@quranschool.com</a> | <a href="https://wa.me/2348062474787?text=As%20salam%20aleikum%2C%20I%20want%20to%20learn%20more%20about%20your%20online%20Quran%20school">WhatsApp</a></p>
+    <p>Developed by GyTech Hub</a> | <a href="https://wa.me/2348146310400?text=I%20want%20a%20website%20for%20my%20business">need a website? click</a></p>
   </footer>
+  <script>
+window.addEventListener("load", () => {
+  gsap.from(".feature", {
+    scrollTrigger: {
+      trigger: "#features",
+      start: "top 80%"
+    },
+    y: 30,
+    opacity: 0,
+    duration: 0.6,
+    stagger: 0.2
+  });
+});
+v
+</script>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="script.js"></script>
+  <script>
+  function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    nav.classList.toggle('show');
+  }
+</script>
+
+<a href="https://wa.me/2348062474787?text=As%20salam%20aleikum%2C%20I%20want%20to%20learn%20more%20about%20your%20online%20Quran%20school" 
+   class="whatsapp-float" 
+   target="_blank" 
+   aria-label="Chat on WhatsApp">
+  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
+</a>
+
+
 </body>
 </html>

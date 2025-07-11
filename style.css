@@ -539,29 +539,6 @@ footer.footer a:hover {
   padding-top: 0.8rem;
 }
 
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.feature {
-  background-color: #ffffff; /* Strong white background */
-  color: #222;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* Slightly stronger shadow */
-  font-size: 1rem;
-  font-weight: 600;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
-}
 
 /* Optional: In dark mode, make sure it’s still readable */
 .dark-mode .feature {
@@ -569,25 +546,6 @@ footer.footer a:hover {
   color: #f0f0f0;
 }
 
-/* === Why Choose Us Enhancements === */
-#features {
-  background-color: #eafaf1; /* Soft greenish background */
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: auto;
-  border-radius: 20px;
-}
-
-.dark-mode #features {
-  background-color: #1c1c1c;
-}
-
-#features h2 {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #1c1c1c;
-}
 
 .dark-mode #features h2 {
   color: #f0f0f0;
@@ -601,35 +559,77 @@ footer.footer a:hover {
   margin-top: 2rem;
 }
 
-.feature {
-  background-color: #ffffff;
-  color: #222;
-  padding: 1.5rem 1.2rem;
-  border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  font-size: 1rem;
-  font-weight: 600;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  min-height: 140px;
-}
-
-.feature:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
-}
-
-.dark-mode .feature {
-  background-color: #2a2a2a;
-  color: #f0f0f0;
-}
 .course-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
+}
+
+/* === Navbar Mobile Styles === */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+    color: #28a745;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: white;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    z-index: 1000;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li a {
+    color: #222;
+    font-size: 1rem;
+  }
+
+  .dark-mode .nav-links {
+    background: #222;
+  }
+
+  .dark-mode .nav-links li a {
+    color: #f0f0f0;
+  }
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #25d366;
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
 }
 
